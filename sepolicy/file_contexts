@@ -1,0 +1,4 @@
+##########################
+# Devices
+#
+/dev/exynos-mem      u:object_r:exynos_device:s0
