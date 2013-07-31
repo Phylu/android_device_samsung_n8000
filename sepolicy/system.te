@@ -1,0 +1,34 @@
+# Access /dev/mali
+allow system mali_device:chr_file { read write open getattr ioctl };
+allow system_app mali_device:chr_file { read write open getattr ioctl };
+
+# Access unix stream sockets
+allow system init:unix_stream_socket { connectto read setopt };
+allow system_app init:unix_stream_socket { connectto read setopt };
+
+# Access /dev/ump
+allow system ump_device:chr_file { read write open getattr ioctl };
+allow system_app ump_device:chr_file { read write open getattr ioctl };
+
+# Access /dev/fimg2d
+allow system fimg2d_device:chr_file { read write open getattr ioctl };
+allow system_app fimg2d_device:chr_file { read write open getattr ioctl };
+
+# Access init_tmpfs
+allow system init_tmpfs:file read;
+allow system_app init_tmpfs:file read;
+
+# Access /dev/uinput
+allow system uinput_device:chr_file { open read write getattr ioctl };
+
+# Access sysfs
+allow system_app sysfs_writable:file rw_file_perms;
+
+# Access adb
+allow system adbd_socket:sock_file write;
+
+# Access /dev/akm8975
+allow system compass_device:chr_file { open read write getattr ioctl };
+
+# Access oom_adj
+allow system init:file write;

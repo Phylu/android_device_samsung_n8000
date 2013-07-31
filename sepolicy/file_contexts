@@ -1,4 +1,23 @@
 ##########################
 # Devices
 #
+/dev/akm8975         u:object_r:compass_device:s0
 /dev/exynos-mem      u:object_r:exynos_device:s0
+/dev/fimg2d          u:object_r:fimg2d_device:s0
+/dev/mali            u:object_r:mali_device:s0
+/dev/ttySAC0         u:object_r:bluetooth_device:s0
+/dev/ump             u:object_r:ump_device:s0
+/dev/umts_ipc0       u:object_r:umts_device:s0
+/dev/umts_boot0      u:object_r:umts_device:s0
+/dev/umts_rfs0       u:object_r:umts_device:s0
+
+##########################
+# SDCard
+#
+/data/media(/.*)?    u:object_r:sdcard_internal:s0
+
+##########################
+# sysfs_writable
+#
+/sys/devices/platform/bcm4334_bluetooth/rfkill/rfkill0/state	u:object_r:sysfs_bluetooth_writable:s0
+/sys/devices/platform/samsung-pd.2/mdnie/mdnie/mdnie/scenario	u:object_r:sysfs_writable:s0

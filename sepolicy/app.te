@@ -1,0 +1,25 @@
+# Access /dev/mali
+allow platform_app mali_device:chr_file { open read write getattr ioctl };
+allow shared_app mali_device:chr_file { open read write getattr ioctl };
+allow untrusted_app mali_device:chr_file { open read write getattr ioctl };
+allow release_app mali_device:chr_file { open read write getattr ioctl };
+
+# Access /dev/ump
+allow platform_app ump_device:chr_file { open read write getattr ioctl };
+allow shared_app ump_device:chr_file { open read write getattr ioctl };
+allow untrusted_app ump_device:chr_file { open read write getattr ioctl };
+allow release_app ump_device:chr_file { open read write getattr ioctl };
+
+# Access unix stream socket
+allow platform_app init:unix_stream_socket { connectto read setopt };
+allow shared_app init:unix_stream_socket { connectto read setopt };
+allow untrusted_app init:unix_stream_socket { connectto read setopt };
+
+# Access init_tmpfs
+allow platform_app init_tmpfs:file read;
+allow shared_app init_tmpfs:file read;
+allow untrusted_app init_tmpfs:file read;
+
+# Access /dev/fimg2d
+allow shared_app fimg2d_device:chr_file { read write open getattr ioctl };
+allow platform_app fimg2d_device:chr_file { read write open getattr ioctl };

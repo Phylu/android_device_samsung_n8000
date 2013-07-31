@@ -33,6 +33,13 @@ BOARD_SEPOLICY_DIRS := \
         device/samsung/n8000/sepolicy
 
 BOARD_SEPOLICY_UNION := \
+	app.te \
+	bluetooth.te \
 	device.te \
+	mediaserver.te \
+	rild.te \
+	shell.te \
+	surfaceflinger.te \
+	system.te \
         file_contexts
 

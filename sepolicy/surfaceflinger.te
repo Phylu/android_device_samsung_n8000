@@ -1,0 +1,5 @@
+# Access /dev/mali
+allow surfaceflinger mali_device:chr_file { open read write getattr ioctl };
+
+# Access /dev/ump
+allow surfaceflinger ump_device:chr_file { open read write getattr ioctl };

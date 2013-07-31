@@ -1,2 +1,8 @@
 # Device types
+type compass_device, dev_type;
 type exynos_device, dev_type;
+type fimg2d_device, dev_type;
+type mali_device, dev_type, mlstrustedobject;
+type bluetooth_device, dev_type;
+type ump_device, dev_type, mlstrustedobject;
+type umts_device, dev_type;
