@@ -12,11 +12,6 @@
 /dev/umts_rfs0       u:object_r:umts_device:s0
 
 ##########################
-# SDCard
-#
-/data/media(/.*)?    u:object_r:sdcard_internal:s0
-
-##########################
 # sysfs_writable
 #
 /sys/devices/platform/bcm4334_bluetooth/rfkill/rfkill0/state	u:object_r:sysfs_bluetooth_writable:s0
